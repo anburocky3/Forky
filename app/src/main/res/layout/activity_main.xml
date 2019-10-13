@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/authorBox"
+        android:layout_width="match_parent"
+        android:layout_height="180dip"
+        android:orientation="vertical"
+        android:background="@color/primary"
+        android:gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/authorImg"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/placeholder"/>
+
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unknown user"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\@unknown"
+            android:textColor="@color/primary_light"
+            style="@style/TextAppearance.AppCompat.Subhead"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/authorBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
